@@ -1,0 +1,322 @@
+:root {
+  --primary: #0078ff;
+  --secondary: #00c6ff;
+  --bg: #f8fbff;
+  --card-bg: #ffffff;
+  --text: #1b2b44;
+  --muted: #6b7c93;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+nav,
+header,
+section,
+footer {
+  transition: all 0.4s ease;
+}
+
+.banner {
+  padding: 3rem;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8%;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  background: linear-gradient(135deg, #eaf6ff 0%, #f3ecff 100%);
+  text-align: center;
+  padding: 60px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.kpi-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.kpi-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi-card h2 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+}
+
+.section {
+  padding: 40px 8%;
+  margin: 20px auto;
+  max-width: 1100px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d0e3f5;
+}
+
+.controls button {
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e6ee;
+}
+
+tr:hover {
+  background: #f5f9ff;
+}
+
+.detail {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  background: #f4f8fc;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* proporsi 2:1 antara bar & pie */
+  gap: 20px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.chart-item {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 100% !important;
+}
+
+.chart-item:hover {
+  transform: translateY(-4px);
+}
+
+.chart-item h3 {
+  font-size: 1rem;
+  color: #1b2b44;
+  margin-bottom: 10px;
+}
+
+.chart-item canvas {
+  width: 100% !important;
+}
+
+.chart-item canvas:first-child {
+  height: 360px !important;
+}
+
+@media (max-width: 900px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-item canvas {
+    height: 280px !important;
+  }
+}
+
+.small {
+  max-width: 500px;
+}
+
+/* --- Chart layout refinement --- */
+.charts-grid.two-col {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+  align-items: stretch;
+  margin-top: 30px;
+}
+
+.chart-item.large {
+  grid-column: span 2;
+}
+
+.chart-item.medium {
+  min-height: 320px;
+}
+
+.chart-item canvas {
+  width: 100% !important;
+  height: 280px !important;
+}
+
+.chart-item h3 {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Responsif di layar kecil */
+@media (max-width: 900px) {
+  .charts-grid.two-col {
+    grid-template-columns: 1fr;
+  }
+  .chart-item canvas {
+    height: 240px !important;
+  }
+}
+
+#avgChart {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#userAvgChart {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* === Tampilan proporsional untuk diagram Median === */
+.chart-item.tall {
+  min-height: 360px;
+  max-width: px; /* 🔹 perlebar kontainer */
+  width: 90%;
+  margin: 0 auto;
+}
+
+#medianChart {
+  width: 100% !important;
+  height: 320px !important; /* sedikit lebih pendek */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsif di layar kecil */
+@media (max-width: 900px) {
+  .chart-item.tall {
+    max-width: 100%;
+  }
+  #medianChart {
+    height: 260px !important;
+  }
+}
+
+#medianChartContainer {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: white;
+  padding: 20px;
+}
+

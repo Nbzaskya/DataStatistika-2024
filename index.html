@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Statistika - Penggunaan Internet</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="banner">
+      <img
+        src="Biru Dan Merah Spanduk Iklan Service Hp & Leptop Gaya Ilustrasi  (2).png"
+        alt="Share of Daily Internet Time by Device"
+      />
+    </div>
+
+    <header class="hero" id="utama">
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <div class="logo">📊 Statistika Internet</div>
+        <ul class="nav-links">
+          <li><a href="#grafik">Grafik</a></li>
+          <li><a href="#tabel">Tabel</a></li>
+          <li><a href="#analisis">Analisis</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <h1>
+          Analisis Penggunaan Internet Berdasarkan Perangkat di Berbagai Negara
+        </h1>
+        <p class="subtitle">
+          Data ini menunjukkan persentase penggunaan internet berdasarkan dua
+          jenis perangkat utama yakni Mobile dan Computer di berbagai negara
+          Pada bulan Juli 2024. Tujuannya adalah untuk membandingkan tren
+          preferensi perangkat dalam mengakses internet.
+        </p>
+        <div class="kpi-container">
+          <div class="kpi-card" id="kpiMobile">
+            <h2>--%</h2>
+            <p>Rata-rata Mobile</p>
+          </div>
+          <div class="kpi-card" id="kpiComputer">
+            <h2>--%</h2>
+            <p>Rata-rata Computer</p>
+          </div>
+          <div class="kpi-card" id="kpiComputer">
+            <h2>55.7%</h2>
+            <p>Range Computer</p>
+          </div>
+          <div class="kpi-card" id="kpiComputer">
+            <h2>44.3%</h2>
+            <p>Range Mobile</p>
+          </div>
+          <div class="kpi-card" id="kpiop">
+            <h2>4.15%</h2>
+            <p>Standar Deviasi</p>
+          </div>
+          <div class="kpi-card highlight" id="kpiTop">
+            <h2>--</h2>
+            <p>Negara Pengguna Device Tertinggi</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="grafik" class="card section">
+        <h2>📊 Grafik Penggunaan Internet</h2>
+        <div class="charts-grid">
+          <div class="chart-item">
+            <h3>Perbandingan Mobile vs Computer</h3>
+            <canvas id="barChart"></canvas>
+          </div>
+          <div class="chart-item">
+            <h3>Distribusi Mobile (Top 5 Negara)</h3>
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+
+        <div class="charts-grid two-col">
+    <div class="chart-item medium">
+      <h3>Top 5 Pengguna Internet Mobile Tertinggi</h3>
+      <canvas id="topMobileChart"></canvas>
+    </div>
+    <div class="chart-item medium">
+      <h3>Top 5 Pengguna Internet Computer Tertinggi</h3>
+      <canvas id="topComputerChart"></canvas>
+    </div>
+  </div>
+
+  <!-- 📊 Grafik Rata-rata -->
+<div class="charts-grid single-col">
+  <div class="chart-item medium" id="avgChartContainer">
+    <h3>Proporsi Rata-rata Penggunaan Internet</h3>
+    <canvas id="avgChart"></canvas>
+  </div>
+
+  <div class="charts-grid single-col">
+  <div class="chart-item tall center-chart" id="medianChartContainer">
+    <h3>Median Penggunaan Internet Mobile vs Computer</h3>
+    <canvas id="medianChart"></canvas>
+  </div>
+</div>
+
+
+
+</section>
+
+      <section id="tabel" class="card section">
+        <h2>📋 Data Per Negara</h2>
+        <div class="controls">
+          <input type="text" id="search" placeholder="Cari negara..." />
+          <select id="filter">
+            <option value="all">Semua</option>
+            <option value="mobile_gt_60">Mobile > 60%</option>
+            <option value="mobile_50_60">Mobile 50–60%</option>
+            <option value="mobile_lt_50">Mobile < 50%</option>
+          </select>
+          <button id="downloadCSV">Download CSV</button>
+        </div>
+        <div class="table-wrapper">
+          <table id="dataTable">
+            <thead>
+              <tr>
+                <th>Negara</th>
+                <th>Mobile (%)</th>
+                <th>Computer (%)</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p id="detail" class="detail">
+          Klik baris untuk melihat detail negara.
+        </p>
+      </section>
+
+      <section id="analisis" class="card section">
+        <h2>📈 Analisis & Kesimpulan</h2>
+        <div id="analysisText"></div>
+        <p id="sourceLink" class="source"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Data Statistika - Tugas Olah Data</p>
+    </footer>
+  </body>
+</html>

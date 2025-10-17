@@ -1,0 +1,152 @@
+[
+  {
+    "country": "Thailand",
+    "mobile": 64.4,
+    "computer": 35.6
+  },
+  {
+    "country": "Indonesia",
+    "mobile": 63.4,
+    "computer": 36.6
+  },
+  {
+    "country": "China",
+    "mobile": 62.9,
+    "computer": 37.1
+  },
+  {
+    "country": "Saudi Arabia",
+    "mobile": 62.2,
+    "computer": 37.8
+  },
+  {
+    "country": "Turkey",
+    "mobile": 60.0,
+    "computer": 40.0
+  },
+  {
+    "country": "Philippines",
+    "mobile": 59.8,
+    "computer": 40.2
+  },
+  {
+    "country": "India",
+    "mobile": 59.5,
+    "computer": 40.5
+  },
+  {
+    "country": "Romania",
+    "mobile": 59.0,
+    "computer": 41.0
+  },
+  {
+    "country": "Mexico",
+    "mobile": 57.4,
+    "computer": 42.6
+  },
+  {
+    "country": "Worldwide",
+    "mobile": 56.9,
+    "computer": 43.1
+  },
+  {
+    "country": "Colombia",
+    "mobile": 56.5,
+    "computer": 43.5
+  },
+  {
+    "country": "Brazil",
+    "mobile": 56.5,
+    "computer": 43.5
+  },
+  {
+    "country": "U.A.E.",
+    "mobile": 56.1,
+    "computer": 43.9
+  },
+  {
+    "country": "Chile",
+    "mobile": 56.0,
+    "computer": 44.0
+  },
+  {
+    "country": "Malaysia",
+    "mobile": 55.7,
+    "computer": 44.3
+  },
+  {
+    "country": "Vietnam",
+    "mobile": 55.6,
+    "computer": 44.4
+  },
+  {
+    "country": "Egypt",
+    "mobile": 55.4,
+    "computer": 44.6
+  },
+  {
+    "country": "Taiwan",
+    "mobile": 55.1,
+    "computer": 44.9
+  },
+  {
+    "country": "Argentina",
+    "mobile": 55.0,
+    "computer": 45.0
+  },
+  {
+    "country": "Hong Kong",
+    "mobile": 55.0,
+    "computer": 45.0
+  },
+  {
+    "country": "South Africa",
+    "mobile": 54.2,
+    "computer": 45.8
+  },
+  {
+    "country": "Ireland",
+    "mobile": 52.5,
+    "computer": 47.5
+  },
+  {
+    "country": "New Zealand",
+    "mobile": 52.4,
+    "computer": 47.6
+  },
+  {
+    "country": "Bulgaria",
+    "mobile": 50.7,
+    "computer": 49.3
+  },
+  {
+    "country": "South Korea",
+    "mobile": 50.7,
+    "computer": 49.3
+  },
+  {
+    "country": "Spain",
+    "mobile": 50.7,
+    "computer": 49.3
+  },
+  {
+    "country": "Hungary",
+    "mobile": 50.7,
+    "computer": 49.3
+  },
+  {
+    "country": "Singapore",
+    "mobile": 50.5,
+    "computer": 49.5
+  },
+  {
+    "country": "Poland",
+    "mobile": 50.5,
+    "computer": 49.5
+  },
+  {
+    "country": "U.S.A.",
+    "mobile": 50.4,
+    "computer": 49.6
+  }
+]
