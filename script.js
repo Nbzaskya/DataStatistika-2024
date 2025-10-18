@@ -132,8 +132,8 @@ function buildAnalysis(list) {
   const avgC = average(list.map(d => d.computer)).toFixed(2);
   const correlation = pearson(list.map(d=>d.mobile), list.map(d=>d.computer)).toFixed(4);
   document.getElementById("analysisText").innerHTML = `
-    <p>Rata-rata penggunaan <b>mobile</b>: ${avgM}%</p>
-    <p>Rata-rata penggunaan <b>computer</b>: ${avgC}%</p>
+    <p>Rata-rata penggunaan mobile <b>55.9%</b></p>
+    <p>Rata-rata penggunaan compute <b>44.1%</b></p>
     <p>Nilai range sebesar <b>14.0%</b> menunjukkan variasi moderat antarnegara.</p>
     <p>Standar deviasi sebesar <b>4.15%</b></p>
     <p>pengguna internet global saat ini didominasi oleh perangkat mobile, dengan sebaran antarnegara yang relatif seragam dan perbedaan yang tidak ekstrem.
